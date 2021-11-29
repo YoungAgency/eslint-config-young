@@ -4,7 +4,7 @@
   "description": "This is an opinionated JavaScript guideline for Young devs. Inspired by Airbnb",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,29 @@
   "bugs": {
     "url": "https://github.com/YoungAgency/eslint-config-young/issues"
   },
-  "homepage": "https://github.com/YoungAgency/eslint-config-young#readme"
+  "homepage": "https://github.com/YoungAgency/eslint-config-young#readme",
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.10",
+    "object.assign": "^4.1.2",
+    "object.entries": "^1.1.5"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "typescript": "^4.5.2"
+  }
 }
