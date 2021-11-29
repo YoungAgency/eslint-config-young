@@ -1,8 +1,11 @@
 {
-  "name": "eslint-config-young",
+  "name": "@youngagency/eslint-config-young",
   "version": "0.0.0-development",
   "description": "This is an opinionated JavaScript guideline for Young devs. Inspired by Airbnb",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "lint": "eslint ."
   },
