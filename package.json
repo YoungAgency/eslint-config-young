@@ -1,0 +1,19 @@
+{
+  "name": "eslint-config-young",
+  "version": "0.0.0-development",
+  "description": "This is an opinionated JavaScript guideline for Young devs. Inspired by Airbnb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoungAgency/eslint-config-young.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YoungAgency/eslint-config-young/issues"
+  },
+  "homepage": "https://github.com/YoungAgency/eslint-config-young#readme"
+}
