@@ -596,8 +596,8 @@ module.exports = {
     "react/function-component-definition": [
       "error",
       {
-        namedComponents: "function-expression",
-        unnamedComponents: "function-expression",
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
       },
     ],
 
