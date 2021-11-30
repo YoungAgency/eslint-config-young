@@ -1,3 +1,5 @@
+# Young JavaScript Style Guide() {
+
 > This is an opinionated JavaScript guideline for Young devs. Inspired by Airbnb
 
 ## Setup
