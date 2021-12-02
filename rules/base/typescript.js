@@ -223,6 +223,9 @@ module.exports = {
     "@typescript-eslint/object-curly-spacing":
       baseStyleRules["object-curly-spacing"],
 
+    "default-case": "off",
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
+
     // Append 'ts' and 'tsx' to Airbnb 'import/extensions' rule
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     "import/extensions": [
