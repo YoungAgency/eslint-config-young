@@ -226,6 +226,8 @@ module.exports = {
     "default-case": "off",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
 
+    "consistent-return": "off",
+
     // Append 'ts' and 'tsx' to Airbnb 'import/extensions' rule
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     "import/extensions": [
