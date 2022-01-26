@@ -2,13 +2,11 @@ module.exports = {
   rules: {
     // enforce line breaks after opening and before closing array brackets
     // https://eslint.org/docs/rules/array-bracket-newline
-    // TODO: enable? semver-major
-    "array-bracket-newline": ["off", "consistent"], // object option alternative: { multiline: true, minItems: 3 }
+    "array-bracket-newline": ["error", { multiline: true }], // object option alternative: { multiline: true, minItems: 3 }
 
     // enforce line breaks between array elements
     // https://eslint.org/docs/rules/array-element-newline
-    // TODO: enable? semver-major
-    "array-element-newline": ["off", { multiline: true, minItems: 3 }],
+    "array-element-newline": ["error", { multiline: true, minItems: 3 }],
 
     // enforce spacing inside array brackets
     "array-bracket-spacing": ["error", "never"],
@@ -478,18 +476,18 @@ module.exports = {
         ObjectExpression: {
           minProperties: 4,
           multiline: true,
-          consistent: true,
         },
-        ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
+        ObjectPattern: { 
+          minProperties: 4, 
+          multiline: true,
+        },
         ImportDeclaration: {
           minProperties: 4,
           multiline: true,
-          consistent: true,
         },
         ExportDeclaration: {
           minProperties: 4,
           multiline: true,
-          consistent: true,
         },
       },
     ],
