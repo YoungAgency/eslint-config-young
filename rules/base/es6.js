@@ -1,7 +1,5 @@
 module.exports = {
-  env: {
-    es6: true,
-  },
+  env: { es6: true, },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
@@ -18,9 +16,7 @@ module.exports = {
     "arrow-body-style": [
       "error",
       "as-needed",
-      {
-        requireReturnForObjectLiteral: false,
-      },
+      { requireReturnForObjectLiteral: false, }
     ],
 
     // require parens in arrow function arguments
@@ -44,12 +40,7 @@ module.exports = {
 
     // disallow arrow functions where they could be confused with comparisons
     // https://eslint.org/docs/rules/no-confusing-arrow
-    "no-confusing-arrow": [
-      "error",
-      {
-        allowParens: true,
-      },
-    ],
+    "no-confusing-arrow": ["error", { allowParens: true, }],
 
     // disallow modifying variables that are declared using const
     "no-const-assign": "error",
@@ -69,15 +60,7 @@ module.exports = {
 
     // Disallow specified names in exports
     // https://eslint.org/docs/rules/no-restricted-exports
-    "no-restricted-exports": [
-      "error",
-      {
-        restrictedNamedExports: [
-          "default", // use `export default` to provide a default export
-          "then", // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
-        ],
-      },
-    ],
+    "no-restricted-exports": ["error", { restrictedNamedExports: ["default", "then"], }],
 
     // disallow specific imports
     // https://eslint.org/docs/rules/no-restricted-imports
@@ -158,9 +141,7 @@ module.exports = {
           object: false,
         },
       },
-      {
-        enforceForRenamedProperties: false,
-      },
+      { enforceForRenamedProperties: false, },
     ],
 
     // disallow parseInt() in favor of binary, octal, and hexadecimal literals
@@ -199,7 +180,12 @@ module.exports = {
         ignoreCase: false,
         ignoreDeclarationSort: false,
         ignoreMemberSort: false,
-        memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+        memberSyntaxSortOrder: [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ],
       },
     ],
 

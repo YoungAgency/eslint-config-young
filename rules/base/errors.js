@@ -135,12 +135,8 @@ module.exports = {
 
     // Disallow loops with a body that allows only one iteration
     // https://eslint.org/docs/rules/no-unreachable-loop
-    "no-unreachable-loop": [
-      "error",
-      {
-        ignore: [], // WhileStatement, DoWhileStatement, ForStatement, ForInStatement, ForOfStatement
-      },
-    ],
+    // WhileStatement, DoWhileStatement, ForStatement, ForInStatement, ForOfStatement
+    "no-unreachable-loop": ["error", { ignore: [] }],
 
     // disallow return/throw/break/continue inside finally blocks
     // https://eslint.org/docs/rules/no-unsafe-finally
@@ -152,10 +148,7 @@ module.exports = {
 
     // disallow use of optional chaining in contexts where the undefined value is not allowed
     // https://eslint.org/docs/rules/no-unsafe-optional-chaining
-    "no-unsafe-optional-chaining": [
-      "error",
-      { disallowArithmeticOperators: true },
-    ],
+    "no-unsafe-optional-chaining": ["error", { disallowArithmeticOperators: true }],
 
     // Disallow Unused Private Class Members
     // https://eslint.org/docs/rules/no-unused-private-class-members

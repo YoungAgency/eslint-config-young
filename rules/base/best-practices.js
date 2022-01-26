@@ -18,12 +18,7 @@ module.exports = {
 
     // enforce that class methods use "this"
     // https://eslint.org/docs/rules/class-methods-use-this
-    "class-methods-use-this": [
-      "error",
-      {
-        exceptMethods: [],
-      },
-    ],
+    "class-methods-use-this": ["error", { exceptMethods: [], }],
 
     // require return statements to either always or never specify values
     // https://eslint.org/docs/rules/consistent-return
@@ -54,7 +49,11 @@ module.exports = {
 
     // require the use of === and !==
     // https://eslint.org/docs/rules/eqeqeq
-    eqeqeq: ["error", "always", { null: "ignore" }],
+    eqeqeq: [
+      "error",
+      "always",
+      { null: "ignore" }
+    ],
 
     // Require grouped accessor pairs in object literals and classes
     // https://eslint.org/docs/rules/grouped-accessor-pairs
@@ -97,7 +96,11 @@ module.exports = {
     "no-empty-function": [
       "error",
       {
-        allow: ["arrowFunctions", "functions", "methods"],
+        allow: [
+          "arrowFunctions",
+          "functions",
+          "methods"
+        ],
       },
     ],
 
@@ -195,12 +198,7 @@ module.exports = {
 
     // disallow use of multiple spaces
     // https://eslint.org/docs/rules/no-multi-spaces
-    "no-multi-spaces": [
-      "error",
-      {
-        ignoreEOLComments: false,
-      },
-    ],
+    "no-multi-spaces": ["error", { ignoreEOLComments: false, }],
 
     // disallow use of multiline strings
     // https://eslint.org/docs/rules/no-multi-str
@@ -330,12 +328,7 @@ module.exports = {
 
     // disallow self assignment
     // https://eslint.org/docs/rules/no-self-assign
-    "no-self-assign": [
-      "error",
-      {
-        props: true,
-      },
-    ],
+    "no-self-assign": ["error", { props: true, }],
 
     // disallow comparisons where both sides are exactly the same
     // https://eslint.org/docs/rules/no-self-compare
@@ -396,7 +389,14 @@ module.exports = {
     // https://eslint.org/docs/rules/no-warning-comments
     "no-warning-comments": [
       "off",
-      { terms: ["todo", "fixme", "xxx"], location: "start" },
+      {
+        terms: [
+          "todo",
+          "fixme",
+          "xxx"
+        ],
+        location: "start"
+      },
     ],
 
     // disallow use of the with statement
@@ -412,12 +412,7 @@ module.exports = {
     "prefer-named-capture-group": "off",
 
     // https://eslint.org/docs/rules/prefer-regex-literals
-    "prefer-regex-literals": [
-      "error",
-      {
-        disallowRedundantWrapping: true,
-      },
-    ],
+    "prefer-regex-literals": ["error", { disallowRedundantWrapping: true, }],
 
     // require use of the second argument for parseInt()
     // https://eslint.org/docs/rules/radix
@@ -437,7 +432,11 @@ module.exports = {
 
     // require immediate function invocation to be wrapped in parentheses
     // https://eslint.org/docs/rules/wrap-iife.html
-    "wrap-iife": ["error", "outside", { functionPrototypeMethods: false }],
+    "wrap-iife": [
+      "error",
+      "outside",
+      { functionPrototypeMethods: false }
+    ],
 
     // require or disallow Yoda conditions
     // https://eslint.org/docs/rules/yoda

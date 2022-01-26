@@ -1,11 +1,7 @@
 module.exports = {
   plugins: ["jsx-a11y", "react"],
 
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
+  parserOptions: { ecmaFeatures: { jsx: true, }, },
 
   rules: {
     // ensure emoji are accessible
@@ -18,7 +14,12 @@ module.exports = {
     "jsx-a11y/alt-text": [
       "error",
       {
-        elements: ["img", "object", "area", 'input[type="image"]'],
+        elements: [
+          "img",
+          "object",
+          "area",
+          'input[type="image"]'
+        ],
         img: [],
         object: [],
         area: [],
@@ -37,7 +38,11 @@ module.exports = {
       {
         components: ["Link"],
         specialLink: ["to"],
-        aspects: ["noHref", "invalidHref", "preferButton"],
+        aspects: [
+          "noHref",
+          "invalidHref",
+          "preferButton"
+        ],
       },
     ],
 
@@ -64,12 +69,7 @@ module.exports = {
 
     // Ensure the autocomplete attribute is correct and suitable for the form field it is used with
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/29c68596b15c4ff0a40daae6d4a2670e36e37d35/docs/rules/autocomplete-valid.md
-    "jsx-a11y/autocomplete-valid": [
-      "off",
-      {
-        inputComponents: [],
-      },
-    ],
+    "jsx-a11y/autocomplete-valid": ["off", { inputComponents: [], }],
 
     // require onClick be accompanied by onKeyUp/onKeyDown/onKeyPress
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/click-events-have-key-events.md
@@ -169,21 +169,11 @@ module.exports = {
 
     // prevent distracting elements, like <marquee> and <blink>
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-distracting-elements.md
-    "jsx-a11y/no-distracting-elements": [
-      "error",
-      {
-        elements: ["marquee", "blink"],
-      },
-    ],
+    "jsx-a11y/no-distracting-elements": ["error", { elements: ["marquee", "blink"], }],
 
     // WAI-ARIA roles should not be used to convert an interactive element to non-interactive
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-interactive-element-to-noninteractive-role.md
-    "jsx-a11y/no-interactive-element-to-noninteractive-role": [
-      "error",
-      {
-        tr: ["none", "presentation"],
-      },
-    ],
+    "jsx-a11y/no-interactive-element-to-noninteractive-role": ["error", { tr: ["none", "presentation"], }],
 
     // A non-interactive element does not support event handlers (mouse and key handlers)
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-interactions.md
@@ -224,7 +214,13 @@ module.exports = {
           "tree",
           "treegrid",
         ],
-        li: ["menuitem", "option", "row", "tab", "treeitem"],
+        li: [
+          "menuitem",
+          "option",
+          "row",
+          "tab",
+          "treeitem"
+        ],
         table: ["grid"],
         td: ["gridcell"],
       },
@@ -293,9 +289,7 @@ module.exports = {
       "off",
       {
         components: [],
-        required: {
-          every: ["nesting", "id"],
-        },
+        required: { every: ["nesting", "id"], },
         allowChildren: false,
       },
     ],

@@ -6,22 +6,18 @@ const dangleRules = baseStyleRules["no-underscore-dangle"];
 module.exports = {
   plugins: ["react"],
 
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
+  parserOptions: { ecmaFeatures: { jsx: true, }, },
 
   // View link below for react rules documentation
   // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
   rules: {
     "no-underscore-dangle": [
       dangleRules[0],
-      assign({}, dangleRules[1], {
-        allow: dangleRules[1].allow.concat([
-          "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__",
-        ]),
-      }),
+      assign(
+        {},
+        dangleRules[1],
+        { allow: dangleRules[1].allow.concat(["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"]), }
+      )
     ],
 
     // Specify whether double or single quotes should be used in JSX attributes
@@ -47,9 +43,9 @@ module.exports = {
           "componentDidUpdate",
           "componentWillUnmount",
           "componentDidCatch",
-          "getSnapshotBeforeUpdate",
-        ],
-      },
+          "getSnapshotBeforeUpdate"
+        ]
+      }
     ],
 
     // Prevent missing displayName in a React component definition
@@ -61,7 +57,11 @@ module.exports = {
     "react/forbid-prop-types": [
       "error",
       {
-        forbid: ["any", "array", "object"],
+        forbid: [
+          "any",
+          "array",
+          "object"
+        ],
         checkContextTypes: true,
         checkChildContextTypes: true,
       },
@@ -73,7 +73,11 @@ module.exports = {
 
     // Enforce boolean attributes notation in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
-    "react/jsx-boolean-value": ["error", "never", { always: [] }],
+    "react/jsx-boolean-value": [
+      "error",
+      "never",
+      { always: [] }
+    ],
 
     // Validate closing bracket location in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
@@ -85,7 +89,11 @@ module.exports = {
 
     // Enforce or disallow spaces inside of curly braces in JSX attributes
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
-    "react/jsx-curly-spacing": ["error", "never", { allowMultiline: true }],
+    "react/jsx-curly-spacing": [
+      "error",
+      "never",
+      { allowMultiline: true }
+    ],
 
     // Enforce event handler naming conventions in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
@@ -108,10 +116,7 @@ module.exports = {
 
     // Limit maximum of props on a single line in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-    "react/jsx-max-props-per-line": [
-      "error",
-      { maximum: 1, when: "multiline" },
-    ],
+    "react/jsx-max-props-per-line": ["error", { maximum: 1, when: "multiline" }],
 
     // Prevent usage of .bind() in JSX props
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -179,12 +184,7 @@ module.exports = {
 
     // Enforce defaultProps declarations alphabetical sorting
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-sort-default-props.md
-    "react/jsx-sort-default-props": [
-      "off",
-      {
-        ignoreCase: true,
-      },
-    ],
+    "react/jsx-sort-default-props": ["off", { ignoreCase: true, }],
 
     // Prevent React to be incorrectly marked as unused
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
@@ -245,10 +245,7 @@ module.exports = {
 
     // Require stateless functions when not using lifecycle methods, setState or ref
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-    "react/prefer-stateless-function": [
-      "error",
-      { ignorePureComponents: true },
-    ],
+    "react/prefer-stateless-function": ["error", { ignorePureComponents: true }],
 
     // Prevent missing props validation in a React component definition
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
@@ -433,12 +430,7 @@ module.exports = {
 
     // Enforce a defaultProps definition for every prop that is not a required prop
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/require-default-props.md
-    "react/require-default-props": [
-      "error",
-      {
-        forbidDefaultForRequired: true,
-      },
-    ],
+    "react/require-default-props": ["error", { forbidDefaultForRequired: true, }],
 
     // Forbids using non-exported propTypes
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
@@ -452,10 +444,7 @@ module.exports = {
 
     // Enforce all defaultProps have a corresponding non-required PropType
     // https://github.com/yannickcr/eslint-plugin-react/blob/9e13ae2c51e44872b45cc15bf1ac3a72105bdd0e/docs/rules/default-props-match-prop-types.md
-    "react/default-props-match-prop-types": [
-      "error",
-      { allowRequiredDefaults: false },
-    ],
+    "react/default-props-match-prop-types": ["error", { allowRequiredDefaults: false }],
 
     // Prevent usage of shouldComponentUpdate when extending React.PureComponent
     // https://github.com/yannickcr/eslint-plugin-react/blob/9e13ae2c51e44872b45cc15bf1ac3a72105bdd0e/docs/rules/no-redundant-should-component-update.md
@@ -482,10 +471,7 @@ module.exports = {
 
     // Enforce curly braces or disallow unnecessary curly braces in JSX props and/or children
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
-    "react/jsx-curly-brace-presence": [
-      "error",
-      { props: "never", children: "never" },
-    ],
+    "react/jsx-curly-brace-presence": ["error", { props: "never", children: "never", }],
 
     // One JSX Element Per Line
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-one-expression-per-line.md
@@ -637,7 +623,11 @@ module.exports = {
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".js", ".jsx", ".json"],
+        extensions: [
+          ".js",
+          ".jsx",
+          ".json"
+        ],
       },
     },
     react: {

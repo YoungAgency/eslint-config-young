@@ -13,16 +13,33 @@ module.exports = {
   settings: {
     // Apply special parsing for TypeScript files
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx", ".d.ts"],
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx",
+        ".d.ts"
+      ],
     },
     // Append 'ts' extensions to Airbnb 'import/resolver' setting
     "import/resolver": {
       node: {
-        extensions: [".mjs", ".js", ".json", ".ts", ".d.ts"],
+        extensions: [
+          ".mjs",
+          ".js",
+          ".json",
+          ".ts",
+          ".d.ts"
+        ],
       },
     },
     // Append 'ts' extensions to Airbnb 'import/extensions' setting
-    "import/extensions": [".js", ".mjs", ".jsx", ".ts", ".tsx", ".d.ts"],
+    "import/extensions": [
+      ".js",
+      ".mjs",
+      ".jsx",
+      ".ts",
+      ".tsx",
+      ".d.ts"
+    ],
     // Resolve type definition packages
     "import/external-module-folders": ["node_modules", "node_modules/@types"],
   },
@@ -41,7 +58,11 @@ module.exports = {
       // Allow camelCase variables (23.2), PascalCase variables (23.8), and UPPER_CASE variables (23.10)
       {
         selector: "variable",
-        format: ["camelCase", "PascalCase", "UPPER_CASE"],
+        format: [
+          "camelCase",
+          "PascalCase",
+          "UPPER_CASE"
+        ],
       },
       // Allow camelCase functions (23.2), and PascalCase functions (23.8)
       {
