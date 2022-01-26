@@ -1,11 +1,7 @@
 module.exports = {
   plugins: ["react-hooks"],
 
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
+  parserOptions: { ecmaFeatures: { jsx: true, }, },
 
   rules: {
     // Enforce Rules of Hooks

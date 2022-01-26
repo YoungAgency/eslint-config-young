@@ -1,7 +1,5 @@
 module.exports = {
-  env: {
-    es6: true,
-  },
+  env: { es6: true, },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
@@ -11,15 +9,20 @@ module.exports = {
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".mjs", ".js", ".json"],
+        extensions: [
+          ".mjs",
+          ".js",
+          ".json"
+        ],
       },
     },
-    "import/extensions": [".js", ".mjs", ".jsx"],
-    "import/core-modules": [],
-    "import/ignore": [
-      "node_modules",
-      "\\.(coffee|scss|css|less|hbs|svg|json)$",
+    "import/extensions": [
+      ".js",
+      ".mjs",
+      ".jsx"
     ],
+    "import/core-modules": [],
+    "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|svg|json)$"],
   },
 
   rules: {
@@ -148,7 +151,15 @@ module.exports = {
     // TODO: enforce a stricter convention in module import order?
     "import/order": [
       "error",
-      { groups: [["builtin", "external", "internal"]] },
+      {
+        groups: [
+          [
+            "builtin",
+            "external",
+            "internal"
+          ]
+        ]
+      },
     ],
 
     // Require a newline after the last import/require in a group
@@ -173,12 +184,7 @@ module.exports = {
 
     // prevent importing the submodules of other modules
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
-    "import/no-internal-modules": [
-      "off",
-      {
-        allow: [],
-      },
-    ],
+    "import/no-internal-modules": ["off", { allow: [], }],
 
     // Warn if a module could be mistakenly parsed as a script by a consumer
     // leveraging Unambiguous JavaScript Grammar
@@ -273,12 +279,7 @@ module.exports = {
 
     // Reports the use of import declarations with CommonJS exports in any module except for the main module.
     // https://github.com/benmosher/eslint-plugin-import/blob/1012eb951767279ce3b540a4ec4f29236104bb5b/docs/rules/no-import-module-exports.md
-    "import/no-import-module-exports": [
-      "error",
-      {
-        exceptions: [],
-      },
-    ],
+    "import/no-import-module-exports": ["error", { exceptions: [], }],
 
     // Use this rule to prevent importing packages through relative paths.
     // https://github.com/benmosher/eslint-plugin-import/blob/1012eb951767279ce3b540a4ec4f29236104bb5b/docs/rules/no-relative-packages.md

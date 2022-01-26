@@ -4,7 +4,14 @@ module.exports = {
     // Append 'ts' extensions to Airbnb 'import/resolver' setting
     "import/resolver": {
       node: {
-        extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".d.ts"],
+        extensions: [
+          ".js",
+          ".jsx",
+          ".json",
+          ".ts",
+          ".tsx",
+          ".d.ts",
+        ],
       },
     },
   },

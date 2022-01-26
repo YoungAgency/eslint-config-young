@@ -2,13 +2,11 @@ module.exports = {
   rules: {
     // enforce line breaks after opening and before closing array brackets
     // https://eslint.org/docs/rules/array-bracket-newline
-    // TODO: enable? semver-major
-    "array-bracket-newline": ["off", "consistent"], // object option alternative: { multiline: true, minItems: 3 }
+    "array-bracket-newline": ["error", { multiline: true }], // object option alternative: { multiline: true, minItems: 3 }
 
     // enforce line breaks between array elements
     // https://eslint.org/docs/rules/array-element-newline
-    // TODO: enable? semver-major
-    "array-element-newline": ["off", { multiline: true, minItems: 3 }],
+    "array-element-newline": ["error", { multiline: true, minItems: 3 }],
 
     // enforce spacing inside array brackets
     "array-bracket-spacing": ["error", "never"],
@@ -18,7 +16,11 @@ module.exports = {
     "block-spacing": ["error", "always"],
 
     // enforce one true brace style
-    "brace-style": ["error", "1tbs", { allowSingleLine: true }],
+    "brace-style": [
+      "error",
+      "1tbs",
+      { allowSingleLine: true }
+    ],
 
     // require camel case names
     camelcase: ["error", { properties: "never", ignoreDestructuring: false }],
@@ -152,9 +154,7 @@ module.exports = {
           parameters: 1,
           body: 1,
         },
-        CallExpression: {
-          arguments: 1,
-        },
+        CallExpression: { arguments: 1, },
         ArrayExpression: 1,
         ObjectExpression: 1,
         ImportDeclaration: 1,
@@ -176,7 +176,7 @@ module.exports = {
           "JSXClosingFragment",
           "JSXText",
           "JSXEmptyExpression",
-          "JSXSpreadChild",
+          "JSXSpreadChild"
         ],
         ignoreComments: false,
       },
@@ -365,8 +365,19 @@ module.exports = {
           ["%", "*"],
           ["%", "/"],
           ["/", "*"],
-          ["&", "|", "<<", ">>", ">>>"],
-          ["==", "!=", "===", "!=="],
+          [
+            "&",
+            "|",
+            "<<",
+            ">>",
+            ">>>"
+          ],
+          [
+            "==",
+            "!=",
+            "===",
+            "!=="
+          ],
           ["&&", "||"],
         ],
         allowSamePrecedence: false,
@@ -465,7 +476,11 @@ module.exports = {
 
     // enforce the location of single-line statements
     // https://eslint.org/docs/rules/nonblock-statement-body-position
-    "nonblock-statement-body-position": ["error", "beside", { overrides: {} }],
+    "nonblock-statement-body-position": [
+      "error",
+      "beside",
+      { overrides: {} }
+    ],
 
     // require padding inside curly braces
     "object-curly-spacing": ["error", "always"],
@@ -478,30 +493,25 @@ module.exports = {
         ObjectExpression: {
           minProperties: 4,
           multiline: true,
-          consistent: true,
         },
-        ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
+        ObjectPattern: {
+          minProperties: 4,
+          multiline: true,
+        },
         ImportDeclaration: {
           minProperties: 4,
           multiline: true,
-          consistent: true,
         },
         ExportDeclaration: {
           minProperties: 4,
           multiline: true,
-          consistent: true,
         },
       },
     ],
 
     // enforce "same line" or "multiple line" on object properties.
     // https://eslint.org/docs/rules/object-property-newline
-    "object-property-newline": [
-      "error",
-      {
-        allowAllPropertiesOnSameLine: true,
-      },
-    ],
+    "object-property-newline": ["error", { allowAllPropertiesOnSameLine: true, }],
 
     // allow just one var statement per function
     "one-var": ["error", "never"],
@@ -516,7 +526,11 @@ module.exports = {
 
     // Requires operator at the beginning of the line in multiline statements
     // https://eslint.org/docs/rules/operator-linebreak
-    "operator-linebreak": ["error", "before", { overrides: { "=": "none" } }],
+    "operator-linebreak": [
+      "error",
+      "before",
+      { overrides: { "=": "none" } }
+    ],
 
     // disallow padding within blocks
     "padded-blocks": [
@@ -526,9 +540,7 @@ module.exports = {
         classes: "never",
         switches: "never",
       },
-      {
-        allowSingleLineBlocks: true,
-      },
+      { allowSingleLineBlocks: true, },
     ],
 
     // Require or disallow padding lines between statements
@@ -552,7 +564,11 @@ module.exports = {
     ],
 
     // specify whether double or single quotes should be used
-    quotes: ["error", "double", { avoidEscape: true }],
+    quotes: [
+      "error",
+      "double",
+      { avoidEscape: true }
+    ],
 
     // do not require jsdoc
     // https://eslint.org/docs/rules/require-jsdoc
@@ -569,7 +585,11 @@ module.exports = {
     "semi-style": ["error", "last"],
 
     // requires object keys to be sorted
-    "sort-keys": ["off", "asc", { caseSensitive: false, natural: true }],
+    "sort-keys": [
+      "off",
+      "asc",
+      { caseSensitive: false, natural: true }
+    ],
 
     // sort variables within the same declaration block
     "sort-vars": "off",
@@ -613,11 +633,20 @@ module.exports = {
       {
         line: {
           exceptions: ["-", "+"],
-          markers: ["=", "!", "/"], // space here to support sprockets directives, slash for TS /// comments
+          markers: [
+            "=",
+            "!",
+            "/"
+          ], // space here to support sprockets directives, slash for TS /// comments
         },
         block: {
           exceptions: ["-", "+"],
-          markers: ["=", "!", ":", "::"], // space here to support sprockets directives and flow comment types
+          markers: [
+            "=",
+            "!",
+            ":",
+            "::"
+          ], // space here to support sprockets directives and flow comment types
           balanced: true,
         },
       },
