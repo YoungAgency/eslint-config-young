@@ -216,6 +216,10 @@ module.exports = {
     semi: "off",
     "@typescript-eslint/semi": baseStyleRules.semi,
 
+    // Require a specific member delimiter style for interfaces and type literals
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/member-delimiter-style.md
+    "@typescript-eslint/member-delimiter-style": "error",
+
     // Replace Airbnb 'space-before-function-paren' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
     "space-before-function-paren": "off",
