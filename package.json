@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/YoungAgency/eslint-config-young#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.14.0",
     "confusing-browser-globals": "^1.0.10",
     "eslint-plugin-import": "^2.25.4",
