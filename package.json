@@ -21,7 +21,7 @@
   "homepage": "https://github.com/YoungAgency/eslint-config-young#readme",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.14.0",
-    "@typescript-eslint/parser": "^5.14.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "confusing-browser-globals": "^1.0.10",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest-dom": "^4.0.1",
